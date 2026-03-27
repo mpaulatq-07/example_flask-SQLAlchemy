@@ -1,0 +1,22 @@
+/* Fondo degradado moderno */
+body {
+    background: linear-gradient(135deg, #7d7dac 0%, #5d698a 50%, #1165cc 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+/* Forzar líneas en la tabla para que se vea organizada */
+.table-bordered, .table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6 !important;
+}
+
+/* Para que las casillas del formulario se vean bien definidas */
+.form-control {
+    border: 2px solid #2c5364 !important;
+}
+
+/* El "encerrado" del formulario */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}   
