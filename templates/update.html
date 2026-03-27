@@ -1,0 +1,46 @@
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-11">
+            <h3 class="text-white mb-4 text-center">Update a contact</h3>
+
+            <div class="p-4 shadow-lg rounded bg-white border-bottom border-dark">
+                
+                <form action="{{ url_for('contacts.update', id=contact.id) }}" method="POST" class="row g-3 align-items-center">
+                    
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold text-dark small">FULLNAME</label>
+                        <input type="text" name="fullname" value="{{ contact.fullname }}" class="form-control border-dark" placeholder="Fullname">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold text-dark small">EMAIL</label>
+                        <input type="email" name="email" value="{{ contact.email }}" class="form-control border-dark" placeholder="Email">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold text-dark small">PHONE</label>
+                        <input type="text" name="phone" value="{{ contact.phone }}" class="form-control border-dark" placeholder="Phone">
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label d-block">&nbsp;</label> <button type="submit" class="btn btn-dark w-100 shadow-sm border-2">
+                            <i class="fa-solid fa-rotate"></i> UPDATE
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="/" class="btn btn-outline-light btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Back to list
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
